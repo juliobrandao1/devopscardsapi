@@ -1,0 +1,265 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projetos\\DevOpsCardsAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|c:\\projetos\\devopscardsapi\\services\\azuredevopsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|solutionrelative:services\\azuredevopsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\pages\\cards.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\services\\cardsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|c:\\projetos\\devopscardsapi\\controllers\\cardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|solutionrelative:controllers\\cardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|c:\\projetos\\devopscardsapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\pages\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\pages\\_host.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\azureboardsui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|c:\\projetos\\devopscardsapi\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|solutionrelative:models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{634524DA-B06C-46C2-83A0-F0D2BD946A77}|..\\AzureBoardsUI\\AzureBoardsUI.csproj|c:\\projetos\\azureboardsui\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|c:\\projetos\\devopscardsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2080F543-E9AF-4824-95D4-F2ABA19478E8}|DevOpsCardsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cards.razor",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Pages\\Cards.razor",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Pages\\Cards.razor",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Pages\\Cards.razor",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Pages\\Cards.razor",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAlwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T20:21:28.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AzureDevOpsService.cs",
+              "DocumentMoniker": "C:\\Projetos\\DevOpsCardsAPI\\Services\\AzureDevOpsService.cs",
+              "RelativeDocumentMoniker": "Services\\AzureDevOpsService.cs",
+              "ToolTip": "C:\\Projetos\\DevOpsCardsAPI\\Services\\AzureDevOpsService.cs",
+              "RelativeToolTip": "Services\\AzureDevOpsService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T18:59:42.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CardsService.cs",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Services\\CardsService.cs",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Services\\CardsService.cs",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Services\\CardsService.cs",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Services\\CardsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T20:20:48.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Models\\Card.cs",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Models\\Card.cs",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Models\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T20:20:11.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Pages\\Index.razor",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Pages\\Index.razor",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Pages\\Index.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T22:03:42.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardsController.cs",
+              "DocumentMoniker": "C:\\Projetos\\DevOpsCardsAPI\\Controllers\\CardsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CardsController.cs",
+              "ToolTip": "C:\\Projetos\\DevOpsCardsAPI\\Controllers\\CardsController.cs",
+              "RelativeToolTip": "Controllers\\CardsController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T19:00:16.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Host.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Pages\\_Host.cshtml",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Pages\\_Host.cshtml",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Pages\\_Host.cshtml",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Pages\\_Host.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T22:03:15.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Program.cs",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Program.cs",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Program.cs",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T20:26:16.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projetos\\DevOpsCardsAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Projetos\\DevOpsCardsAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-08T18:56:52.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AzureBoardsUI",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\AzureBoardsUI.csproj",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\AzureBoardsUI.csproj",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\AzureBoardsUI.csproj",
+              "RelativeToolTip": "..\\AzureBoardsUI\\AzureBoardsUI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-08T22:28:28.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Pages\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Pages\\_Layout.cshtml",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Pages\\_Layout.cshtml",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Pages\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T22:03:52.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Projetos\\DevOpsCardsAPI\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "Models\\Card.cs",
+              "ToolTip": "C:\\Projetos\\DevOpsCardsAPI\\Models\\Card.cs",
+              "RelativeToolTip": "Models\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T20:34:55.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "..\\AzureBoardsUI\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T22:06:50.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Projetos\\AzureBoardsUI\\App.razor",
+              "RelativeDocumentMoniker": "..\\AzureBoardsUI\\App.razor",
+              "ToolTip": "C:\\Projetos\\AzureBoardsUI\\App.razor",
+              "RelativeToolTip": "..\\AzureBoardsUI\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-08T21:20:41.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\DevOpsCardsAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Projetos\\DevOpsCardsAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-08T18:56:50.403Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

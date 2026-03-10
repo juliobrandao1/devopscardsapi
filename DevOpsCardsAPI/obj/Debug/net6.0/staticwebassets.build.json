@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "HRVjV2dKTHpbAjuNoTthUFgrwi041nJVoVpUwqx3A08=",
+  "Source": "DevOpsCardsAPI",
+  "BasePath": "_content/DevOpsCardsAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

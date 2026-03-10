@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevOpsCardsAPI", "DevOpsCardsAPI.csproj", "{2080F543-E9AF-4824-95D4-F2ABA19478E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBoardsUI", "..\AzureBoardsUI\AzureBoardsUI.csproj", "{634524DA-B06C-46C2-83A0-F0D2BD946A77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2080F543-E9AF-4824-95D4-F2ABA19478E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2080F543-E9AF-4824-95D4-F2ABA19478E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2080F543-E9AF-4824-95D4-F2ABA19478E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2080F543-E9AF-4824-95D4-F2ABA19478E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634524DA-B06C-46C2-83A0-F0D2BD946A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634524DA-B06C-46C2-83A0-F0D2BD946A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634524DA-B06C-46C2-83A0-F0D2BD946A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634524DA-B06C-46C2-83A0-F0D2BD946A77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
