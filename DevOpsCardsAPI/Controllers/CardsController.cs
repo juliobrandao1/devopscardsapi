@@ -16,7 +16,7 @@ public class CardsController : ControllerBase
     [HttpPost("create")]
     public async Task<IActionResult> CreateCard([FromBody] CardRequest request)
     {
-        var result = await _service.CreateCard(request.Title, request.AssignedTo, request.IterationPath);
+        var result = await _service.CreateCard(request.Title, request.AssignedTo, request.IterationPath, request.StoryPoints);
         return Ok(result);
     }
 
@@ -98,6 +98,16 @@ public class CardsController : ControllerBase
         return Ok(result);
     }
 
+    [HttpPut("update")]
+    public async Task<IActionResult> UpdateCard([FromBody] Card card)
+    {
+        if (card == null || card.Id <= 0)
+            return BadRequest("Card inválido.");
+
+        var result = await _service.UpdateCard(card);
+        return Ok(result);
+    }
+
 }
 
 public class CardRequest
@@ -105,4 +115,6 @@ public class CardRequest
     public string Title { get; set; }
     public string AssignedTo { get; set; }
     public string IterationPath { get; set; }
+    public int StoryPoints { get; set; }
+
 }

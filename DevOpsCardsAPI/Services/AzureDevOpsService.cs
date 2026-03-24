@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using AzureBoardsAPI.Models;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
@@ -26,18 +27,24 @@ public class AzureDevOpsService
     }
 
     // Criar card
-    public async Task<string> CreateCard(string title, string assignedTo, string iterationPath)
+    public async Task<string> CreateCard(string title, string assignedTo, string iterationPath, int storyPoints)
     {
+        var areaPath = "Agile Delivery\\\\Workspace - Savannah27\\\\Workspace - Savannah27 (Credenciamento)";
         var jsonContent = $@"
-        [
-          {{ ""op"": ""add"", ""path"": ""/fields/System.Title"", ""value"": ""{title}"" }},
-          {{ ""op"": ""add"", ""path"": ""/fields/System.AssignedTo"", ""value"": ""{assignedTo}"" }},
-          {{ ""op"": ""add"", ""path"": ""/fields/System.IterationPath"", ""value"": ""{iterationPath}"" }}
-        ]";
+    [
+      {{ ""op"": ""add"", ""path"": ""/fields/System.Title"", ""value"": ""{title}"" }},
+      {{ ""op"": ""add"", ""path"": ""/fields/System.AssignedTo"", ""value"": ""{assignedTo}"" }},
+      {{ ""op"": ""add"", ""path"": ""/fields/System.IterationPath"", ""value"": ""{iterationPath}"" }},
+      {{ ""op"": ""add"", ""path"": ""/fields/Microsoft.VSTS.Scheduling.StoryPoints"", ""value"": {storyPoints} }},
+      {{ ""op"": ""add"", ""path"": ""/fields/System.AreaPath"", ""value"": ""{areaPath}"" }}
+    ]";
 
         var content = new StringContent(jsonContent, Encoding.UTF8, "application/json-patch+json");
+
         var response = await _client.PostAsync(
-            $"{_orgUrl}/{_project}/_apis/wit/workitems/$User Story?api-version=7.0", content);
+            $"{_orgUrl}/{_project}/_apis/wit/workitems/$User%20Story?api-version=7.0",
+            content
+        );
 
         return await response.Content.ReadAsStringAsync();
     }
@@ -161,5 +168,25 @@ public class AzureDevOpsService
         return users.ToList();
     }
 
+    public async Task<string> UpdateCard(Card card)
+    {
+        var jsonContent = $@"
+    [
+      {{ ""op"": ""replace"", ""path"": ""/fields/System.Title"", ""value"": ""{card.Title}"" }},
+      {{ ""op"": ""replace"", ""path"": ""/fields/System.AssignedTo"", ""value"": ""{card.AssignedTo}"" }},
+      {{ ""op"": ""replace"", ""path"": ""/fields/System.IterationPath"", ""value"": ""{card.IterationPath}"" }},
+      {{ ""op"": ""replace"", ""path"": ""/fields/Microsoft.VSTS.Scheduling.StoryPoints"", ""value"": {card.StoryPoints} }},
+      {{ ""op"": ""replace"", ""path"": ""/fields/System.State"", ""value"": ""{card.State}"" }}
+    ]";
+
+        var content = new StringContent(jsonContent, Encoding.UTF8, "application/json-patch+json");
+
+        var response = await _client.PatchAsync(
+            $"{_orgUrl}/{_project}/_apis/wit/workitems/{card.Id}?api-version=7.0",
+            content
+        );
+
+        return await response.Content.ReadAsStringAsync();
+    }
 
 }

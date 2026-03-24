@@ -5,6 +5,8 @@
     public string AssignedTo { get; set; }
     public int? StoryPoints { get; set; }
     public string IterationPath { get; set; }
+    public string State { get; set; }
     public bool IsSelected { get; set; }
+
 
 }

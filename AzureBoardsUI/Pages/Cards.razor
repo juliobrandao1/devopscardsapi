@@ -1,5 +1,6 @@
 ﻿@page "/cards"
 @inject CardsService CardsService
+@inject IJSRuntime JsRuntime
 
 <div class="container mt-4">
     <div class="row mb-3">
@@ -40,7 +41,67 @@
             </div>
         </div>
     }
-
+    @if (showClonePopup)
+    {
+        <div class="modal show d-block" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Clonar Cards</h5>
+                        <button type="button" class="btn-close" @onclick="()=>showClonePopup=false"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Selecione os tipos de clone:</p>
+                        <div>
+                            <input type="checkbox" @bind="cloneFront" /> Clone Front<br />
+                            <input type="checkbox" @bind="cloneBff" /> Clone Bff<br />
+                            <input type="checkbox" @bind="cloneApiCore" /> Clone API Core
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" @onclick="()=>showClonePopup=false">Cancelar</button>
+                        <button class="btn btn-primary" @onclick="ConfirmClone">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    @if (showEditPopup)
+    {
+        <div class="modal show d-block" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar Cards Selecionados</h5>
+                        <button type="button" class="btn-close" @onclick="()=>showEditPopup=false"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label>Story Points</label>
+                            <input type="number" class="form-control" @bind="bulkStoryPoints" />
+                        </div>
+                        <div class="mb-3">
+                            <label>State</label>
+                            <select class="form-select" @bind="bulkState">
+                                <option value="New">New</option>
+                                <option value="Active">Active</option>
+                                <option value="Resolved">Resolved</option>
+                                <option value="Closed">Closed</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>Iteration Path</label>
+                            <input class="form-control" list="iterationOptions" @bind="bulkIterationPath" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" @onclick="()=>showEditPopup=false">Cancelar</button>
+                        <button class="btn btn-primary" @onclick="SaveBulkEdit">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
@@ -80,7 +141,10 @@
         <button class="btn btn-warning" @onclick="EditSelected">Editar</button>
         <button class="btn btn-info" @onclick="ShowClonePopup">Clonar</button>
     </div>
+
 </div>
+
+
 
 @code {
     private List<Card> cards = new();
@@ -89,6 +153,13 @@
     private string iterationPath;
     private string assignedTo;
     private bool isLoading = false;
+    private bool showClonePopup;
+    private bool cloneFront, cloneBff, cloneApiCore;
+    private bool showEditPopup = false;
+    private Card? cardBeingEdited;
+    private int bulkStoryPoints;
+    private string bulkState;
+    private string bulkIterationPath;
 
     // Paginação
     private int currentPage = 1;
@@ -151,4 +222,106 @@
     {
         if (CanGoPrevious) currentPage--;
     }
+
+    private void ShowClonePopup()
+    {
+        showClonePopup = true;
+    }
+
+    private async Task ConfirmClone()
+    {
+        var selectedCards = cards.Where(c => c.IsSelected).ToList();
+        if (!selectedCards.Any()) return;
+
+        // aqui você pode abrir outro popup de confirmação
+        // e pedir o IterationPath destino
+        var targetIteration = iterationPath; // ou perguntar ao usuário
+
+        foreach (var card in selectedCards)
+        {
+            if (cloneFront)
+            {
+                var clone = new Card
+                    {
+                        Title = card.Title + " Front Integracao",
+                        AssignedTo = "Júlio de Assis Brandão",
+                        IterationPath = targetIteration,
+                        StoryPoints = 3
+                    };
+                await CardsService.CreateCard(clone);
+            }
+            if (cloneBff)
+            {
+                var clone = new Card
+                    {
+                        Title = card.Title + " Bff",
+                        AssignedTo = "Júlio de Assis Brandão",
+                        IterationPath = targetIteration,
+                        StoryPoints = 2
+                    };
+                await CardsService.CreateCard(clone);
+            }
+            if (cloneApiCore)
+            {
+                var clone = new Card
+                    {
+                        Title = card.Title + " API Core",
+                        AssignedTo = "Júlio de Assis Brandão",
+                        IterationPath = targetIteration,
+                        StoryPoints = 3
+                    };
+                await CardsService.CreateCard(clone);
+            }
+        }
+
+        showClonePopup = false;
+        cloneFront = cloneBff = cloneApiCore = false;
+        await LoadCards(); // recarregar grid
+    }
+    private async Task DeleteSelected()
+    {
+        var selectedCards = cards.Where(c => c.IsSelected).ToList();
+        if (!selectedCards.Any()) return;
+
+        // Confirmação simples (pode ser popup se quiser)
+        if (!await JsRuntime.InvokeAsync<bool>("confirm", $"Deseja excluir {selectedCards.Count} cards?"))
+            return;
+
+        foreach (var card in selectedCards)
+        {
+            // Aqui você chama o endpoint de exclusão
+            await CardsService.DeleteCard(card.Id);
+        }
+
+        // Recarregar a lista
+        await LoadCards();
+    }
+
+    private async Task EditSelected()
+    {
+        var selectedCards = cards.Where(c => c.IsSelected).ToList();
+        if (!selectedCards.Any()) return;
+
+        // abre modal de edição em lote
+        showEditPopup = true;
+    }
+
+    private async Task SaveBulkEdit()
+    {
+        var selectedCards = cards.Where(c => c.IsSelected).ToList();
+        if (!selectedCards.Any()) return;
+
+        foreach (var card in selectedCards)
+        {
+            card.StoryPoints = bulkStoryPoints;
+            card.IterationPath = bulkIterationPath;
+            card.State = bulkState; // precisa existir no modelo Card
+
+            await CardsService.UpdateCard(card);
+        }
+
+        showEditPopup = false;
+        await LoadCards();
+    }
+
 }

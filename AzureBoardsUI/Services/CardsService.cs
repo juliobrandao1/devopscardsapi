@@ -43,5 +43,15 @@ public class CardsService
             $"https://localhost:7051/api/cards/assigned-users?iterationPath={iterationPath}");
         return result ?? new List<string>();
     }
+    public async Task DeleteCard(int id)
+    {
+        await _http.DeleteAsync($"https://localhost:7051/api/cards/delete/{id}");
+    }
+
+    public async Task<string> UpdateCard(Card card)
+    {
+        var response = await _http.PutAsJsonAsync("https://localhost:7051/api/cards/update", card);
+        return await response.Content.ReadAsStringAsync();
+    }
 
 }
